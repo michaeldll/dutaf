@@ -1,0 +1,33 @@
+1.
+Afcher la liste des artcles (désignaton, prix de vente).
+2.
+Afcher la liste des artcles de moins de 50 Euros.
+3.
+Afcher la liste complète des artcles avec à chaque fois la 
+provenance (le fournisseur).
+4.
+Supprimer l’artcle numéro 12.
+5.
+Augmenter tous les prix de vente de 4%.
+6.
+Retrouver les prix d’origine.
+7.
+Afcher la descripton et le prix de l’artcle le moins cher.
+8.
+Afcher la descripton et le prix de l'artcle le plus cher.
+9.
+De la même façon, afcher le prix moyen des artcles.
+10.
+Afcher le prix moyen des artcles pour chacun des fournisseurs.
+11.
+Compter les artcles pour chacun des fournisseurs.
+
+form_new_art - liste déroulante = php select
+1. SELECT art_desi,art_prix FROM articles
+
+2. SELECT * FROM articles WHERE art_prix < 50
+
+3. SELECT art_num, art_desc, art_desi, art_prix, art_qua, fou_nom
+   FROM articles
+   INNER JOIN fournisseurs 
+   ON articles._fou_num = fournisseurs.fou_num
